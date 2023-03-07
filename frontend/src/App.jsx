@@ -1,4 +1,5 @@
 import Home from "./pages/Home";
+import "@fontsource/quicksand";
 
 import "./App.css";
 
