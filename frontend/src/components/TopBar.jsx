@@ -1,18 +1,20 @@
 import "../assets/CSS/TopBar.css";
-import avatarUser from "../assets/avatar_user.png";
+import shopInfos from "../assets/shopInfos.svg";
+import "@fontsource/montserrat";
+import "@fontsource/montserrat/700.css";
+import "@fontsource/montserrat/200.css";
 
 function TopBar() {
   return (
     <div className="topBar">
       <section className="topBar_left">
         <div className="salutationMessage">
-          Bonjour <span className="userFname"> Jean-Michel ! 👏</span>
+          Bienvenue chez <span className="shopName">la Petite Italie</span>
         </div>
-        <div className="statusMessage"> Vous avez 9 messages non lus</div>
       </section>
       <section className="topBar_right">
-        <div className="topBar_right_item">
-          <img src={avatarUser} alt="Avatar User" />
+        <div className="askInformations">
+          <img src={shopInfos} alt="Shop Infos" />
         </div>
       </section>
     </div>

@@ -1,0 +1,14 @@
+.help-conversation {
+  display: flex;
+  flex-direction: column;
+}
+
+.help-conversation__content {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}

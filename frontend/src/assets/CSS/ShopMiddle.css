@@ -1,0 +1,18 @@
+.shopMiddle {
+  display: flex;
+  flex-direction: row;
+}
+
+.shopMiddle_left img {
+  width: auto;
+  height: auto;
+  margin-left: 1rem;
+}
+
+.shopMiddle_message {
+  color: #ffffff;
+  font-family: "Calligraffitti";
+  font-size: 1.25rem;
+  width: 80%;
+  margin-top: 2.5rem;
+}
