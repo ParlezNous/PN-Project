@@ -1,0 +1,28 @@
+.fieldsPS {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.fieldsPS_name {
+    color: #fff;
+    font-size: 1rem;
+    font-family: Montserrat;
+}
+
+.fieldsPS_value input   {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    font-family: Montserrat;
+    border: 0.5px solid #fff;
+    width: 21rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    padding-left: 0.5rem;
+    outline: none;
+}

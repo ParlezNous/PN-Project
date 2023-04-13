@@ -1,0 +1,14 @@
+.pisDescribe__content {
+    color: #fff;
+    font-size: 1rem;
+    font-family: Montserrat;
+    text-align: justify;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.pisDescribe__content span {
+    font-size: 1rem;
+    font-weight: 600;
+}

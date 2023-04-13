@@ -5,7 +5,7 @@ import "@fontsource/montserrat";
 export default function Home() {
   return (
     <div className="widgetEmbed">
-      <Widget />;
+      <Widget />
     </div>
   );
 }

@@ -1,14 +1,16 @@
-import Home from "./pages/Home";
-import "@fontsource/quicksand";
-
-import "./App.css";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "@pages/Home";
+import PersonnalScreen from "@pages/PersonnalScreen";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="pscollect" element={<PersonnalScreen />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
