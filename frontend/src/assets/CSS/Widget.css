@@ -1,7 +1,7 @@
 .widget {
   background: #0a0a0a;
   width: 24rem;
-  height: 36rem;
+  max-height: 36rem;
   border-radius: 2rem;
 }
 

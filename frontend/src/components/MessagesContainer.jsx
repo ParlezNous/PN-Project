@@ -1,20 +1,56 @@
+import React, { useState, useEffect } from "react";
 import "../assets/CSS/MessagesContainer.css";
+import axios from "axios";
 
 function MessagesContainer() {
-  return (
-    <div className="messages-container">
-      <div className="message-box">
-        <div className="message-box__message">
-          <div className="message-box__message__content">
-            <div className="message-box__message__content__text">
-              <p>Salut, comment vas-tu ?</p>
-            </div>
-            <div className="message-box__message__content__date">
-              <p>15:30</p>
+  const [messages, setMessages] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:5501/messages").then((response) => {
+      setMessages(response.data);
+    });
+  }, []);
+
+  const messagesEndRef = React.useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  const renderMessages = () => {
+    return messages.map((message) => {
+      if (message.author === 1) {
+        return (
+          <div key={message.id} className="message__outer">
+            <div className="message__inner_sent">
+              <div className="message__bubble_sent">
+                <div className="message__text">{message.content}</div>
+              </div>
+              <div className="message__spacer"></div>
             </div>
           </div>
-        </div>
-      </div>
+        );
+      } else {
+        return (
+          <div key={message.id} className="message__outer">
+            <div className="message__inner_received">
+              <div className="message__bubble_received">
+                <div className="message__text">{message.content}</div>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    });
+  };
+  return (
+    <div className="messages-container">
+      {renderMessages()}
+      <div ref={messagesEndRef} />
     </div>
   );
 }

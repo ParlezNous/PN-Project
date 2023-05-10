@@ -1,20 +1,45 @@
 import "../assets/CSS/MessageBox.css";
 import { useState } from "react";
+import axios from "axios";
 import micIcon from "../assets/mic-icon.svg";
 import sentIcon from "../assets/send-icon.svg";
 import attachIcon from "../assets/attach-icon.svg";
 
 function MessageBox() {
   const [inputValue, setInputValue] = useState("");
+  const [messages, setMessages] = useState({ author: 1, content: "" });
 
-  const handleInput = (e) => {
-    setInputValue(e.target.value);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setMessages({
+      ...messages,
+      [name]: value,
+    });
   };
+
+  const sendMessage = () => {
+    axios.post("http://localhost:5501/messages", {
+      author: messages.author,
+      content: messages.content,
+    });
+  };
+
+  const refreshPage = () => {
+    window.location.reload(true);
+  };
+
   const sendIcon = () => {
-    if (inputValue.length !== 0) {
+    if (messages.content.length !== 0) {
       return (
         <div className="send_icon">
-          <img src={sentIcon} alt="send" />
+          <img
+            src={sentIcon}
+            alt="send"
+            onClick={() => {
+              sendMessage();
+              refreshPage();
+            }}
+          />
         </div>
       );
     }
@@ -34,7 +59,8 @@ function MessageBox() {
         <div className="message-input">
           <input
             id="inputValue"
-            onChange={handleInput}
+            onChange={handleChange}
+            name="content"
             type="text"
             placeholder="Ecrivez votre message ici"
           />
