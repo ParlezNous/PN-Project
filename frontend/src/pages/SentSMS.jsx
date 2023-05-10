@@ -1,11 +1,11 @@
 import "../assets/CSS/Home.css";
 import "@fontsource/montserrat";
-import WidgePS from "@components/WidgetPS";
+import SentSMSScreen from "@components/SentSMSScreen";
 
-export default function PersonnalScreen() {
+export default function SentSMS() {
   return (
     <div className="widgetEmbed">
-      <WidgePS />
+      <SentSMSScreen />
     </div>
   );
 }

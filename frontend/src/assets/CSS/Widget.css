@@ -4,3 +4,11 @@
   height: 36rem;
   border-radius: 2rem;
 }
+
+.shoperPhoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}

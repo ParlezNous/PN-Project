@@ -1,0 +1,31 @@
+.conversation-header {
+  display: flex;
+  flex-direction: column;
+  height: auto !important;
+  background-color: #767676;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.conversation-header__information {
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.titleConversation {
+  color: white;
+  font-size: 1rem;
+  font-family: Montserrat;
+}
+
+.titleConversation span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.dataConversation {
+  color: white;
+  font-size: 1rem;
+  font-family: Montserrat;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
