@@ -1,0 +1,52 @@
+.conversation-header {
+  display: flex;
+  flex-direction: column;
+  height: auto !important;
+  background-color: #767676;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.conversation-header__information {
+  margin-left: 1rem;
+  display: flex;
+}
+
+.titleConversation {
+  color: white;
+  font-size: 1rem;
+  font-family: Montserrat;
+}
+
+.titleConversation span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.dataConversation {
+  color: white;
+  font-size: 1rem;
+  font-family: Montserrat;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.returnButton {
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.returnButton img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.conversation-header__information__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 1rem;
+}

@@ -32,6 +32,7 @@ const models = {};
 const ItemManager = require("./ItemManager");
 const UserManager = require("./UserManager");
 const MessageManager = require("./MessageManager");
+const SellerManager = require("./SellerManager");
 
 models.item = new ItemManager();
 models.item.setDatabase(pool);
@@ -39,6 +40,8 @@ models.user = new UserManager();
 models.user.setDatabase(pool);
 models.messages = new MessageManager();
 models.messages.setDatabase(pool);
+models.seller = new SellerManager();
+models.seller.setDatabase(pool);
 
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model

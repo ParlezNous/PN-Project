@@ -1,12 +1,12 @@
-import "../assets/CSS/MessageBox.css";
+import "@assets/CSS/MessageBox.css";
 import { useState } from "react";
 import axios from "axios";
-import micIcon from "../assets/mic-icon.svg";
-import sentIcon from "../assets/send-icon.svg";
-import attachIcon from "../assets/attach-icon.svg";
+import micIcon from "@assets/mic-icon.svg";
+import sentIcon from "@assets/send-icon.svg";
+import attachIcon from "@assets/attach-icon.svg";
 
 function MessageBox() {
-  const [messages, setMessages] = useState({ author: 1, content: "" });
+  const [messages, setMessages] = useState({ author: 2, content: "" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,7 +18,7 @@ function MessageBox() {
 
   const sendMessage = () => {
     axios.post(`${import.meta.env.VITE_BACKEND_URL}/messages`, {
-      author: messages.author,
+      author: 2,
       content: messages.content,
     });
   };

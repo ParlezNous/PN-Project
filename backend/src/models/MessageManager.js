@@ -1,14 +1,15 @@
 const AbstractManager = require("./AbstractManager");
 
-class ItemManager extends AbstractManager {
+class MessageManager extends AbstractManager {
   constructor() {
     super({ table: "messages" });
   }
 
   insert(message) {
-    return this.database.query(`insert into ${this.table} (author,content) values (?,?)`, [
-      message.author, message.content
-    ]);
+    return this.database.query(
+      `insert into ${this.table} (author,content) values (?,?)`,
+      [message.author, message.content]
+    );
   }
 
   update(user) {
@@ -19,4 +20,4 @@ class ItemManager extends AbstractManager {
   }
 }
 
-module.exports = ItemManager;
+module.exports = MessageManager;

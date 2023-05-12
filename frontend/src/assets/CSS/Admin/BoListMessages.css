@@ -1,0 +1,44 @@
+.listMessages {
+  height: 24rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.messageContent {
+  margin-left: 0.5rem;
+}
+
+.iconMessage {
+  margin: 1rem;
+}
+
+.messageAuthor {
+  font-weight: bold;
+  color: #fff;
+  font-family: Montserrat;
+  text-decoration: none;
+}
+
+.extractMessage {
+  margin-top: 0.2rem;
+  color: #fff;
+  font-size: 0.8rem;
+  font-family: Montserrat;
+  text-decoration: none;
+}
+
+.messageDate {
+  color: #fff;
+  font-size: 0.8rem;
+  font-family: Montserrat;
+  margin-right: 1rem;
+  margin-left: auto;
+}

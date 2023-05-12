@@ -1,0 +1,12 @@
+.boTopbar {
+  display: flex;
+}
+
+.welcomeMessage {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  font-family: Montserrat;
+  font-weight: 700;
+  color: #fff;
+}

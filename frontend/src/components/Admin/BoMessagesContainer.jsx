@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "../assets/CSS/MessagesContainer.css";
+import "@assets/CSS/MessagesContainer.css";
 import axios from "axios";
 
-function MessagesContainer() {
+function BoMessagesContainer() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function MessagesContainer() {
 
   const renderMessages = () => {
     return messages.map((message) => {
-      if (message.author === 1) {
+      if (message.author === 2) {
         return (
           <div key={message.id} className="message__outer">
             <div className="message__inner_sent">
@@ -56,4 +56,4 @@ function MessagesContainer() {
   );
 }
 
-export default MessagesContainer;
+export default BoMessagesContainer;
