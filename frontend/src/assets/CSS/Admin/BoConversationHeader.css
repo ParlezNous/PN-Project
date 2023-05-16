@@ -6,7 +6,7 @@
   border-radius: 2rem 2rem 0 0;
 }
 
-.conversation-header__information {
+.conversation-header__information_admin {
   margin-left: 1rem;
   display: flex;
   flex-direction: row;

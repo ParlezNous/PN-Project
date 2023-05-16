@@ -18,7 +18,7 @@ function BoConversationHeader() {
 
   return (
     <div className="conversation-header">
-      <div className="conversation-header__information">
+      <div className="conversation-header__information_admin">
         <div className="returnButton">
           <Link to="/admin">
             <img src={backIcon} alt="back" />
