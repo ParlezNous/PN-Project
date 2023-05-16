@@ -9,6 +9,8 @@
 .conversation-header__information {
   margin-top: 0.5rem;
   margin-left: 1.5rem;
+  display: flex;
+    flex-direction: column;
 }
 
 .titleConversation {
