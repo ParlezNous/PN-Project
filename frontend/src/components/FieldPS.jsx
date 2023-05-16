@@ -45,7 +45,7 @@ function FieldsPS() {
         </div>
       </div>
       <div className="buttonActionArea">
-        <Link to="./sentsms">
+        <Link to="../sentsms">
           <button
             type="button"
             className="buttonAction"
