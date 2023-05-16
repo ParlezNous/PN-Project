@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pscollect" element={<PersonnalScreen />} />
-        <Route path="/sentsms" element={<SentSMS />} />
+        <Route path="/pscollecte/sentsms" element={<SentSMS />} />
         <Route path="ABC123" element={<MessageScreen />} />
         <Route path="admin" element={<BoHome />} />
         <Route path="admin/message" element={<BoMessageScreen />} />
