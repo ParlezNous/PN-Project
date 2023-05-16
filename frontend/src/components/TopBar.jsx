@@ -1,4 +1,5 @@
 import "../assets/CSS/TopBar.css";
+import { Link } from "react-router-dom";
 import shopInfos from "../assets/shopInfos.svg";
 import "@fontsource/montserrat";
 import "@fontsource/montserrat/700.css";
@@ -14,7 +15,9 @@ function TopBar() {
       </section>
       <section className="topBar_right">
         <div className="askInformations">
-          <img src={shopInfos} alt="Shop Infos" />
+          <Link to="/ABC123">
+            <img src={shopInfos} alt="Shop Infos" />
+          </Link>
         </div>
       </section>
     </div>
