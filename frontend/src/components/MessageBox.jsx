@@ -1,7 +1,6 @@
 import "../assets/CSS/MessageBox.css";
 import { useState } from "react";
 import micIcon from "../assets/mic-icon.svg";
-import sentIcon from "../assets/send-icon.svg";
 import attachIcon from "../assets/attach-icon.svg";
 
 function MessageBox() {
@@ -37,8 +36,8 @@ function MessageBox() {
       return (
         <div className="send_icon">
           {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
-          <img
-            src={sentIcon}
+          <button
+            type="button"
             alt="send"
             onClick={() => {
               sendMessage();
