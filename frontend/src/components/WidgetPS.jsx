@@ -4,7 +4,7 @@ import PisDescribe from "@components/PisDescribe";
 import FieldsPS from "@components/FieldPS";
 import ConsentRGPD from "@components/ConsentRGPD";
 
-function Widget() {
+function WidgetPS() {
   return (
     <div className="widget">
       <PisDescribe />
@@ -15,4 +15,4 @@ function Widget() {
   );
 }
 
-export default Widget;
+export default WidgetPS;

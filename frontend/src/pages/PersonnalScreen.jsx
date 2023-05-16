@@ -1,11 +1,11 @@
 import "../assets/CSS/Home.css";
 import "@fontsource/montserrat";
-import WidgePS from "@components/WidgetPS";
+import WidgetPS from "@components/WidgetPS";
 
 export default function PersonnalScreen() {
   return (
     <div className="widgetEmbed">
-      <WidgePS />
+      <WidgetPS />
     </div>
   );
 }
