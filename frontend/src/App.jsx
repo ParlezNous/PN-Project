@@ -15,10 +15,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/pscollect" element={<PersonnalScreen />} />
         <Route path="/sentsms" element={<SentSMS />} />
-        <Route path="ABC123" element={<MessageScreen />} />
-        <Route path="admin" element={<BoHome />} />
-        <Route path="admin/message" element={<BoMessageScreen />} />
-        <Route path="profil" element={<BoProfilUsers />} />
+        <Route path="/ABC123" element={<MessageScreen />} />
+        <Route path="/admin" element={<BoHome />} />
+        <Route path="/admin/message" element={<BoMessageScreen />} />
+        <Route path="/profil" element={<BoProfilUsers />} />
       </Routes>
     </BrowserRouter>
   );
