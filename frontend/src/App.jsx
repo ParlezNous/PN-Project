@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "@pages/Home";
 import PersonnalScreen from "@pages/PersonnalScreen";
 import SentSMS from "@pages/SentSMS";
@@ -10,7 +10,7 @@ import BoProfilUsers from "@pages/Admin/BoProfilUsers";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pscollect" element={<PersonnalScreen />} />
@@ -20,7 +20,7 @@ function App() {
         <Route path="/admin/message" element={<BoMessageScreen />} />
         <Route path="/profil" element={<BoProfilUsers />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
