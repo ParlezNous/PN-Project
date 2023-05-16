@@ -25,7 +25,7 @@ function MessageBox() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        author: messages.author,
+        author: 1,
         content: messages.content,
       }),
     });
