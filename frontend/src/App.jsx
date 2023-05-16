@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "@pages/Home";
 import PersonnalScreen from "@pages/PersonnalScreen";
 import SentSMS from "@pages/SentSMS";
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/pscollect" element={<PersonnalScreen />} />
         <Route path="/sentsms" element={<SentSMS />} />
-        <Route path="ABC123" element={<MessageScreen />} />
+        <Route path="/ABC123" element={<MessageScreen />} />
         <Route path="/admin" element={<BoHome />} />
         <Route path="/admin/message" element={<BoMessageScreen />} />
         <Route path="/profil" element={<BoProfilUsers />} />
