@@ -1,5 +1,6 @@
 import "../assets/CSS/MessageBox.css";
 import { useState } from "react";
+import axios from "axios";
 import micIcon from "../assets/mic-icon.svg";
 import attachIcon from "../assets/attach-icon.svg";
 
@@ -18,16 +19,10 @@ function MessageBox() {
     window.location.reload(true);
   };
 
-  const sendMessage = () => {
-    fetch("https://powerful-plateau-78644.herokuapp.com/messages", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        author: 1,
-        content: messages.content,
-      }),
+  const sendMessage = async () => {
+    await axios.post("https://powerful-plateau-78644.herokuapp.com/messages", {
+      author: 1,
+      content: messages.content,
     });
   };
 

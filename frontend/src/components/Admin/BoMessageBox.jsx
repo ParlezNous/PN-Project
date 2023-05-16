@@ -16,8 +16,8 @@ function MessageBox() {
     });
   };
 
-  const sendMessage = () => {
-    axios.post("https://powerful-plateau-78644.herokuapp.com/messages", {
+  const sendMessage = async () => {
+    await axios.post("https://powerful-plateau-78644.herokuapp.com/messages", {
       author: 2,
       content: messages.content,
     });
