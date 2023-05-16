@@ -15,7 +15,7 @@ function FieldsPS() {
   };
 
   const createUser = () => {
-    axios.post("http://37.27.8.111/users", {
+    axios.post("/api/users", {
       name: data.name,
       firstname: data.firstname,
       phone: data.phone,
