@@ -1,6 +1,7 @@
 import "../assets/CSS/FieldsPS.css";
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function FieldsPS() {
   const [data, setData] = useState({ name: "", firstname: "", phone: "" });
@@ -11,10 +12,6 @@ function FieldsPS() {
       ...data,
       [name]: value,
     });
-  };
-
-  const linkto = () => {
-    window.location.href = `${import.meta.env.VITE_FRONTEND_URL}/sentSMS`;
   };
 
   const createUser = () => {
@@ -48,16 +45,17 @@ function FieldsPS() {
         </div>
       </div>
       <div className="buttonActionArea">
-        <button
-          type="button"
-          className="buttonAction"
-          onClick={() => {
-            createUser();
-            linkto();
-          }}
-        >
-          Suivant
-        </button>
+        <Link to="sentSMS">
+          <button
+            type="button"
+            className="buttonAction"
+            onClick={() => {
+              createUser();
+            }}
+          >
+            Suivant
+          </button>{" "}
+        </Link>
       </div>
     </div>
   );
