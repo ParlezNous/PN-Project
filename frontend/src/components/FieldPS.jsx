@@ -14,8 +14,12 @@ function FieldsPS() {
     });
   };
 
+  const api = axios.create({
+    baseURL: `http://37.27.8.111:5501/`,
+  });
+
   const createUser = () => {
-    axios.post(`/api/users`, {
+    axios.post(`${api}"/users"`, {
       name: data.name,
       firstname: data.firstname,
       phone: data.phone,
