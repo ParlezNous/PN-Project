@@ -21,7 +21,7 @@ function MessageBox() {
   };
 
   const sendMessage = () => {
-    axios.post(`${import.meta.env.VITE_BACKEND_URL}/messages`, {
+    axios.post("https://powerful-plateau-78644.herokuapp.com/messages", {
       author: messages.author,
       content: messages.content,
     });
