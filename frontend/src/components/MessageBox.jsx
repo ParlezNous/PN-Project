@@ -1,7 +1,6 @@
 import "../assets/CSS/MessageBox.css";
 import { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import sendIcon from "../assets/send-icon.svg";
 import attachIcon from "../assets/attach-icon.svg";
 
@@ -17,10 +16,14 @@ function MessageBox() {
   };
 
   const sendMessage = async () => {
+    const refreshPage = () => {
+      window.location.reload(true);
+    };
     await axios.post("https://powerful-plateau-78644.herokuapp.com/messages", {
       author: 1,
       content: messages.content,
     });
+    refreshPage();
   };
 
   return (
@@ -39,16 +42,14 @@ function MessageBox() {
           />
         </div>
         <div className="send_icon">
-          <Link to="/ABC123">
-            {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
-            <img
-              src={sendIcon}
-              alt="send"
-              onClick={() => {
-                sendMessage();
-              }}
-            />
-          </Link>
+          {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
+          <img
+            src={sendIcon}
+            alt="send"
+            onClick={() => {
+              sendMessage();
+            }}
+          />
         </div>
       </div>
     </div>
