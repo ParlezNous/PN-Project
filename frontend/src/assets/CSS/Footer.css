@@ -16,6 +16,12 @@
   justify-content: center;
 }
 
+.footer__content a {
+  text-decoration: none;
+  color: #767676;
+  margin-right: 0.1rem;
+}
+
 .logoFooter {
   margin-left: 0.5rem;
 }

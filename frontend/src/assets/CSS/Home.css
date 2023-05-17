@@ -1,7 +1,10 @@
 .widgetEmbed {
   width: 100%;
-  height: 100%;
+  height: 60rem;
+  padding-top: 2rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  background-color: #000;
+  background-repeat: repeat-y;
 }

@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer__content">
-        Propulsé par
+        <a href="/"> Propulsé</a> par
         <Link to="/admin">
           <img src={logoFooter} alt="logo" className="logoFooter" />
         </Link>
