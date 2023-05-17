@@ -1,4 +1,1 @@
-  from = "/api/*"
-  to = "http://37.27.8.111/:splat"
-  status = 200
-  force = true
+/* /index.html 200

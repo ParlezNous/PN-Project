@@ -1,7 +1,7 @@
 import "../assets/CSS/MessageBox.css";
 import { useState } from "react";
 import axios from "axios";
-import micIcon from "../assets/mic-icon.svg";
+import sendIcon from "../assets/send-icon.svg";
 import attachIcon from "../assets/attach-icon.svg";
 
 function MessageBox() {
@@ -26,29 +26,6 @@ function MessageBox() {
     });
   };
 
-  const sendIcon = () => {
-    if (messages.content.length !== 0) {
-      return (
-        <div className="send_icon">
-          {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
-          <button
-            type="button"
-            alt="send"
-            onClick={() => {
-              sendMessage();
-              refreshPage();
-            }}
-          />
-        </div>
-      );
-    }
-    return (
-      <div className="mic_icon">
-        <img src={micIcon} alt="mic" />
-      </div>
-    );
-  };
-
   return (
     <div className="messageSent_Container">
       <div className="messageSent_box">
@@ -64,7 +41,17 @@ function MessageBox() {
             placeholder="Ecrivez votre message ici"
           />
         </div>
-        {sendIcon()}
+        <div className="send_icon">
+          {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
+          <img
+            src={sendIcon}
+            alt="send"
+            onClick={() => {
+              sendMessage();
+              refreshPage();
+            }}
+          />
+        </div>
       </div>
     </div>
   );
