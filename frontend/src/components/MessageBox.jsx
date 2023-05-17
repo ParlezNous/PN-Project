@@ -15,9 +15,9 @@ function MessageBox() {
     });
   };
 
-  /* const refreshPage = () => {
-    window.location.reload(true);
-  }; */
+  const navigateTo = () => {
+    window.location.href = "ABC123";
+  };
 
   const sendMessage = async () => {
     await axios.post("https://powerful-plateau-78644.herokuapp.com/messages", {
@@ -48,6 +48,7 @@ function MessageBox() {
             alt="send"
             onClick={() => {
               sendMessage();
+              navigateTo();
             }}
           />
         </div>
