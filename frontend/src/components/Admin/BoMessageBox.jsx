@@ -17,10 +17,14 @@ function MessageBox() {
   };
 
   const sendMessage = async () => {
+    const refreshPage = () => {
+      window.location.reload(true);
+    };
     await axios.post("https://powerful-plateau-78644.herokuapp.com/messages", {
       author: 2,
       content: messages.content,
     });
+    refreshPage();
   };
 
   const refreshPage = () => {
