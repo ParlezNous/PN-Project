@@ -15,7 +15,7 @@ function FieldsPS() {
   };
 
   const createUser = () => {
-    axios.post("/api/users", {
+    axios.post("https://powerful-plateau-78644.herokuapp.com/users", {
       name: data.name,
       firstname: data.firstname,
       phone: data.phone,
