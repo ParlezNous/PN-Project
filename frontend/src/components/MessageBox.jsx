@@ -1,6 +1,7 @@
 import "../assets/CSS/MessageBox.css";
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import sendIcon from "../assets/send-icon.svg";
 import attachIcon from "../assets/attach-icon.svg";
 
@@ -13,10 +14,6 @@ function MessageBox() {
       ...messages,
       [name]: value,
     });
-  };
-
-  const navigateTo = () => {
-    window.location.href = "ABC123";
   };
 
   const sendMessage = async () => {
@@ -42,15 +39,16 @@ function MessageBox() {
           />
         </div>
         <div className="send_icon">
-          {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
-          <img
-            src={sendIcon}
-            alt="send"
-            onClick={() => {
-              sendMessage();
-              navigateTo();
-            }}
-          />
+          <Link to="ABC123">
+            {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
+            <img
+              src={sendIcon}
+              alt="send"
+              onClick={() => {
+                sendMessage();
+              }}
+            />
+          </Link>
         </div>
       </div>
     </div>
